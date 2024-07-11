@@ -1,0 +1,215 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.demo-block {
+  background-color: #f0f4ff;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  width: 80%;
+  max-width: 1200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.demo-button {
+  background-color: #4a6ef5;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.demo-button:hover {
+  background-color: #3b5bd8;
+}
+
+
+/*  Модальное окно */
+
+.modal {
+  display: none; /* Изначально скрываем модальное окно */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #F0F4FC;
+  padding: 24px;
+  width: 80%;
+  max-width: calc(500px - 48px);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 4px;
+}
+
+.title-form {
+  font-size: 24px;
+  color: #323232;
+  margin-top: 0px;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container input {
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  background-color: #D7E2F6;
+}
+
+.input-container label {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  color: #1F4284;
+  transition: 0.2s ease-out;
+}
+
+.close {
+  color: #000000;
+  font-size: 35px;
+  font-weight: 200;
+  width: 52px;
+  height: 52px;
+  padding: 12px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.input-container input::placeholder {
+  color: #1F4284;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label, input, button {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+input[type="email"] {
+  margin-bottom: 4px;
+}
+
+input[type="email"], input[type="password"] {
+  padding: 24px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #D7E2F6;
+}
+
+.data-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 36px;
+}
+
+.button {
+  padding: 18px;
+  background-color: transparent;
+  border: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.login {
+  color: #FFFFFF;
+  background-color: #244C98;
+  margin-bottom: 4px;
+}
+
+.registration {
+  color: #244C98;
+  border: 1px solid #244C98;
+}
+
+.remember {
+  margin: 24px 0;
+}
+
+.restore {
+  color: #244C98;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .demo-block {
+    width: 90%;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 375px) {
+  .demo-block {
+    padding: 20px;
+  }
+
+  .modal-content {
+    padding: 10px;
+  }
+
+  label, input, button {
+    font-size: 14px;
+  }
+}
